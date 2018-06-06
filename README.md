@@ -77,4 +77,6 @@ function createLocation() {
  - 08 [BrowserRouter](./chapters/BrowserRouter.js)
  - 09 [generatePath](./chapters/generatePath.js)
 
+ [附上一个简单路由实现，了解一下原理](./hashRouter.html)
+
 
