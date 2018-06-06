@@ -1,8 +1,7 @@
 ## React-router Ver 4.3
-在单页面应用最重要的就是路由，本文就简单的解读下react框架下最流行的路由模块react-router，由于react-rotuer每次版本更新变化较大，故本文只从react-router4.3 入手
+在单页面应用最重要的就是路由，本文就简单的解读下react框架下最流行的路由模块react-router,由于react-rotuer每次版本更新变化较大，故本文只从react-router4.3 入手
 
-概要:
-react-router是对history历史状态库的封装，使UI和URL进行同步，本文只是对具体实现的一个分析，一些用法就不再赘述
+概要:react-router是对history历史状态库的封装，使UI和URL进行同步，本文只是对具体实现的一个分析，的一些用法不再赘述
 
 ### history
 - 老浏览器的history: 主要通过hash来实现，对应`createHashHistory`
@@ -60,9 +59,9 @@ function createLocation() {
 |--`react-router-redux`
 
 一般使用只需引入`react-router-dom`即可，因为`react-router-dom`内部依赖了`react-router`
-如果使用了redux则再引入`react-router-redux`
-如果是native应用，则再引入`react-router-redux`
-`react-router-config`是简化了路由的配置，拆分路由，统一引入，利于多人合作
+如果使用了redux则再引入 `react-router-redux`
+如果是native应用，则再引入 `react-router-redux`
+`react-router-config`是简化了路由的配置，拆分路由，统一引入，利于多人合作
 
 ### 基本原理
 ![path-to-regexp](./assets/source.png)
