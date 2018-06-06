@@ -1,4 +1,4 @@
-### React-router Ver 4.3
+## React-router Ver 4.3
 在单页面应用最重要的就是路由，本文就简单的解读下react框架下最流行的路由模块react-router，由于react-rotuer每次版本更新变化较大，故本文只从react-router4.3 入手
 
 概要：
@@ -48,7 +48,7 @@ function createLocation() {
 }
 ```
 
-### react-rotuer 结构
+### react-router 结构
 |--`react-router`
 |--`react-router-config`
 |--`react-router-dom`
@@ -63,7 +63,7 @@ function createLocation() {
 ### 目录
  - 01 [Router](./chapter/Router.md)
  - 02 [Route](./chapter/Route.md)
- - 03 [Swtich](./chapter/Swtich.md)
+ - 03 [Switch](./chapter/Switch.md)
  - 04 [matchPath](./chapter/matchPath.md)
  - 05 [Link](./chapter/Link.md)
  - 06 [Redirect](./chapter/Redirect.md)
