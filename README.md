@@ -52,12 +52,13 @@ function createLocation() {
 ![path-to-regexp](./assets/path-to-regexp.png)
 
 ### react-router 结构
-|--`react-router` 
-|--`react-router-config` 
-|--`react-router-dom` 
-|--`react-router-native` 
-|--`react-router-redux` 
-
+```
++ -- react-router
++ -- react-router-config 
++ -- react-router-dom
++ -- react-router-native 
++ -- react-router-redux
+```
 一般使用只需引入`react-router-dom`即可，因为`react-router-dom`内部依赖了`react-router`
 如果使用了redux则再引入 `react-router-redux`
 如果是native应用，则再引入`react-router-redux`
