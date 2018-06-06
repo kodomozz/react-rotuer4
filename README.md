@@ -1,7 +1,7 @@
 ## React-router Ver 4.3
 在单页面应用最重要的就是路由，本文就简单的解读下react框架下最流行的路由模块react-router，由于react-rotuer每次版本更新变化较大，故本文只从react-router4.3 入手
 
-概要：
+概要:
 react-router是对history历史状态库的封装，使UI和URL进行同步，本文只是对具体实现的一个分析，一些用法就不再赘述
 
 ### history
@@ -48,6 +48,10 @@ function createLocation() {
 }
 ```
 
+### path-to-regexp
+在react-router4中用于将路径转化为正则， 再通过exec方法匹配路径
+![path-to-regexp](./assets/path-to-regexp.png)
+
 ### react-router 结构
 |--`react-router`
 |--`react-router-config`
@@ -60,14 +64,17 @@ function createLocation() {
 如果是native应用，则再引入`react-router-redux`
 `react-router-config`是简化了路由的配置，拆分路由，统一引入，利于多人合作
 
+### 基本原理
+![path-to-regexp](./assets/source.png)
 ### 目录
- - 01 [Router](./chapter/Router.md)
- - 02 [Route](./chapter/Route.md)
- - 03 [Switch](./chapter/Switch.md)
- - 04 [matchPath](./chapter/matchPath.md)
- - 05 [Link](./chapter/Link.md)
- - 06 [Redirect](./chapter/Redirect.md)
- - 07 [HashRouter](./chapter/HashRouter.md)
- - 08 [BrowserRouter](./chapter/BrowserRouter.md)
+ - 01 [Router](./chapters/Router.js)
+ - 02 [Route](./chapters/Route.js)
+ - 03 [Switch](./chapters/Switch.js)
+ - 04 [matchPath](./chapters/matchPath.js)
+ - 05 [Link](./chapters/Link.js)
+ - 06 [Redirect](./chapters/Redirect.js)
+ - 07 [HashRouter](./chapters/HashRouter.js)
+ - 08 [BrowserRouter](./chapters/BrowserRouter.js)
+ - 09 [generatePath](./chapters/generatePath.js)
 
 
