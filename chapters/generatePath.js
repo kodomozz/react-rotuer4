@@ -11,7 +11,7 @@ const compileGenerator = pattern => {
   if (cache[pattern]) return cache[pattern];
 
   // pathToRegexp.compile(path)
-  // var toPath = pathToRegexp_compile(_/foo/:baz/icon-(\\d+).png
+  // var toPath = pathToRegexp_compile(/foo/:baz/icon-(\\d+).png/)
   //该函数接收一个对象，以对象的形式传值给路径参数，返回请求路径。
   // toPath({baz:'bazzz',0:1123'>)//=> /foo/bazzz/Icon-123.png
   const compiledGenerator = pathToRegexp.compile(pattern);

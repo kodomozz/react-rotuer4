@@ -79,4 +79,37 @@ function createLocation() {
 
  [附上一个简单路由实现，了解一下原理](./hashRouter.html)
 
+ ### Q&A
+ 如果进入两个相同的路劲但是带的参数不一样（/:id）之类的，会重新加载页面吗？
+ ```
+  答案是会重新加载页面
+  componentWillReceiveProps(nextProps, nextContext) {
+    warning(
+      !(nextProps.location && !this.props.location),
+      '<Route> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.'
+    );
+
+    warning(
+      !(!nextProps.location && this.props.location),
+      '<Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.'
+    );
+
+    this.setState({
+      match: this.computeMatch(nextProps, nextContext.router)
+    });
+  }
+  当地址栏发生变化时，route组件会进入`componentWillReceiveProps`生命周期方法
+ 
+   return {
+    path, // the path pattern used to match
+    url: path === "/" && url === "" ? "/" : url, // the matched portion of the URL
+    isExact, // whether or not we matched exactly
+    params: keys.reduce((memo, key, index) => {
+      memo[key.name] = values[index];
+      return memo;
+    }, {})
+  };
+   由于路劲参数不同 matchPath方法返回的match 对象的params参数发生了变化，且有一个setState方法，导致重新渲染
+ ```
+
 
