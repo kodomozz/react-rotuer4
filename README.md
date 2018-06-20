@@ -110,6 +110,7 @@ function createLocation() {
     }, {})
   };
    由于路劲参数不同 matchPath方法返回的match 对象的params参数发生了变化，且有一个setState方法，导致重新渲染
+   注意点：这样的情况不会触发componentDidMount事件，react内部进行了dif操作，如果有子组件不同，则会替换子组件
  ```
 
 
